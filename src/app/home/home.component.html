@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="container" style="background-color:#E0E0E0;margin:10px;text-align:center;">
+        <h1>{{title}}</h1>
+    </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4" *ngFor="let car of cars">
+                <div class="thumbnail">
+                <img  id="carimage" [src]="car.image" style="width: 300px;height:190px;" alt="...">
+                <div class="caption">
+                    <h3> {{car.brand}} -  {{car.model}}</h3>
+                    <p>{{car.year}}</p>
+                    <p>{{car.description}}</p>
+                    <button type="button" class="btn btn-primary" (click) ="moreDetails()">More Details</button>
+                    <p id="more" ></p>
+                </div>
+                </div>
+            </div>
+         </div>
+</div>
